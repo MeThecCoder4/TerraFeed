@@ -115,10 +115,10 @@ if (isset($_POST["btRegister"]))
     if ($formValid == true)
     {
         $insertSql = "INSERT INTO Users (login, email, password, feederId) VALUES
-                            ('" . $_POST["login"] . "',
-                             '" . $_POST["email"] . "',
-                             '" . $_POST["passwd"] . "',
-                             '" . $_POST["feederId"] . "')";
+                            ('" . trim($_POST["login"]) . "',
+                             '" . trim($_POST["email"]) . "',
+                             '" . trim($_POST["passwd"]) . "',
+                             '" . trim($_POST["feederId"]) . "')";
         // Successfully registered new user
         if (mysqli_query($dbConnection, $insertSql))
         {
