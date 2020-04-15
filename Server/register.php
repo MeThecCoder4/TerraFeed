@@ -58,7 +58,7 @@ echo "<label for=\"passwd\">Password:</label><br>
     <input type=\"password\" id=\"passwd\" name=\"passwd\" maxlength=\"64\"><br>";
 // Validate password
 if (isset($_POST["btRegister"]) && (strlen(trim($_POST["passwd"])) == 0 ||
-        strpos(trim($_POST["login"]), " ") != false))
+        strpos(trim($_POST["passwd"]), " ") != false))
 {
     $formValid = false;
     echo "<h3>Invalid password!</h3>";
